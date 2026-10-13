@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+
+  <style>
+  
+
+  
+  body {
+    margin: 0;                                 
+    font-family: Arial, Helvetica, sans-serif;  
+    background: #f4f4f4;                        
+  }
+
+  /* Main page container */
+  .container {
+    max-width: 1100px;     
+    margin: 40px auto;     
+    padding: 20px;         
+    text-align: center;   
+  }
+
+  /* (WHAT IT IS)Flexbox wrapper for the layout(WHAT IT DOES). */
+//
+    /*  stack items in a line like vertically when using them in a phone or tablet or android device(WHAT IT MEANS) IT MEANS THAT THE CONTENT STAYS TOGETHER LIKE IN OUR FLEXBOX ASSIGMENT
+    THESE BOXES ALL STAYED GROUPED AS ONE  */
+  .wrapper {
+    display: flex;           
+    flex-direction: column; 
+    gap: 20px;                
+  }
+
+  /* Individual content sections (cards) */
+   /* this is what i used to make the color of the BOXES cards be orange, I made them that color for halloween! plus a lil border*/
+  .section {
+    background: #c0904d;        
+    padding: 20px;           
+    border-radius: 12px;     
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); 
+    border-style:solid ;
+  }
+
+
+  @media (min-width: 600px) {
+    body { background: #cfe8ff; }  
+
+    .wrapper {
+      flex-direction: row;     
+      flex-wrap: wrap;         
+      justify-content: center;
+    }
+
+    .section { width: 45%; }  
+  }
+   /* 2 columns (45% leaves room for the gap) */
+
+ /*next color for desktop and smaller screens starts here */
+  @media (min-width: 900px) {
+    body { background: #e7de8f; }   
+
+    .section { width: 30%; }       
+  }
+
+   /* bigger and the default size for largest screens starting from 1200pixels is where you get white and then other colors as you phone downsizes.*/
+  @media (min-width: 1200px) {
+    body { background: #ffffff }  
+
+    /* ~4 columns. 22% (not 25%) leaves room for the gap, padding, and rounding so the row never overflows. */
+    .section { width: 22%; }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>HALLOWEEN PUMPKIN SMASH!</h1>
+    <img src="ROCKCHARLIELOGO.png" width="40%" height="20%">
+    <p>This Halloween dress up us as your favorite characters from the hit series Gaming Series "Charlie-Murder" the best costume wins 100$ </p>
+
+    <div class="wrapper">
+
+      <div class="section">
+        <h2>Box 1</h2>
+         <img src="Charlie_Murder_CharlieZOMBIE_turntable.gif" width="80%" height="70%"
+         <BR>
+        <p>"Zombie-Charlie"</p>
+      </div>
+
+      <div class="section">
+        <h2>Box 2</h2>
+        <img src="Charlie_Murder_Kelly_turntable.gif" width="80%" height="70%"
+        <BR>
+        <p>"Kelly"</p>
+      </div>
+
+      <div class="section">
+        <h2>Box 3</h2>
+         <img src="Charlie_Murder_Lester_1_turntable.gif" width="80%" height="70%"
+         <BR>
+        <p>"Lester"</p>
+      </div>
+
+      <div class="section">
+        <h2>Box 4</h2>
+         <img src="Charlie_Murder_Rex_turntable.11.gif" width="80%" height="70%"
+         <BR>
+        <p>"Rex"</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
